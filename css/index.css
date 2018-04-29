@@ -5,3 +5,32 @@ body
     background-size: cover;
 }
 
+
+
+div
+{
+    margin: auto;
+    width: 60%;
+    padding: 10px;
+    margin-top: 10%;
+    text-align: center;
+
+}
+#blo
+{
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+    padding: 20px;
+    font-size: 24px;
+}
+@font-face {
+    font-family: myFirstFont;
+    src: url("GWIBBLE_.TTF");
+    font-weight: bold;
+}
+p
+{
+    font-family: myFirstFont;
+    font-size: 30px;
+}
