@@ -67,7 +67,7 @@
                     <form method="get" action="<?php
                     if(isset($_COOKIE['logincookie']))
                     {
-                        echo "?????" ; /// The URL for profile Or resume ?
+                        echo "profile.php" ; /// The URL for profile Or resume ?
                     }
                     else
                     {
