@@ -65,7 +65,20 @@
 
     <div class="row">
         <div class="col-md-5  toppad  pull-right col-md-offset-3 ">
-            <A href="#" >Logout</A>
+            
+            <?php
+            if (isset($_GET['out']))
+            {
+                unset($_COOKIE['logincookie']) ;
+                unset($_COOKIE['loginname']) ;
+
+            }
+            ?>
+            <form method="get" action="">
+             <input type="submit" value="Logout" name="out">
+            </form>
+
+
             <br>
             <p class=" text-info"><?php echo "Today is " . date("Y-m-d")  ?></p>
         </div>
