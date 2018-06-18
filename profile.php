@@ -2,13 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Profile </title>
+    <link rel="icon" href="img/rocket.ico">
+    <link href="css/profile.css" rel="stylesheet" >
+    <link href="css/profilebootstrap.css" rel="stylesheet" id="bootstrap-css">
+    <link href="css/navbar.css" rel="stylesheet">
+    <title>Profile | Eldad Project </title>
 </head>
 <body>
-<link rel="icon" href="img/rocket.ico">
-<link href="css/profile.css" rel="stylesheet" >
-<link href="css/profilebootstrap.css" rel="stylesheet" id="bootstrap-css">
-<link href="css/navbar.css" rel="stylesheet">
+
 <div class="container">
 
     <nav class="navbar">
