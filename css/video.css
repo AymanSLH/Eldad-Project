@@ -17,3 +17,15 @@
 .rating {
     display: block;
 }
+
+
+@font-face {
+    font-family: myFirstFont;
+    src: url("GWIBBLE_.TTF");
+    font-weight: bold;
+}
+h3 , .w3-bar-item
+{
+    font-family: myFirstFont;
+    font-size: 30px;
+}
