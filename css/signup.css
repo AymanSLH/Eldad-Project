@@ -5,8 +5,7 @@ body {
     font-family: 'Comfortaa', cursive;
     color: #373f51;
 }
-
-.container::before{
+.container:before{
     content: "";
     position: fixed;
     z-index: -1;
@@ -17,14 +16,11 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
 
-
 -webkit-filter: blur(9px);
     -moz-filter: blur(9px);
     -o-filter: blur(9px);
     -ms-filter: blur(9px);
     filter: blur(9px);
-
-
 }
 
 form {
@@ -32,8 +28,6 @@ form {
     width: 60%;
     padding: 30px;
     background: #ffffffe5;
-
-    position: absolute;
     margin: auto;
     top: 0;
     bottom: 0;
@@ -41,20 +35,17 @@ form {
     right: 0;
 }
 
-
    h1{
        font-family: 'Comfortaa', cursive;
        font-weight: bold;
        font-size: 40px;
        margin-bottom: 3px;;
-
    }
 p{
     font-family: 'Comfortaa', cursive;
     font-style: italic;
     font-weight: 100;
 }
-
 
    input{
        width: 100%;
@@ -67,7 +58,6 @@ p{
        font-family: 'Comfortaa', cursive;
    }
 
-
    button {
        width: 100%;
        padding: 12px;
@@ -78,4 +68,3 @@ p{
        transition: 0.2s linear;
        border-radius: 3px;
    }
-

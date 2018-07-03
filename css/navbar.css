@@ -15,7 +15,6 @@ main
     background: #4568DC;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #B06AB3, #4568DC);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #B06AB3, #4568DC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
     border-bottom: 2px solid linear-gradient(to right, #B06AB3, #4568DC);
     box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.7);
     margin: 0px;

@@ -14,9 +14,8 @@
     <nav class="navbar">
         <ul>
             <li><a href="index.php">Home</a></li>
-            <li><a href="">Forum</a></li>
+            <li><a href="forumindex.php">Forum</a></li>
             <li><a href="#">Chat</a></li>
-
 
             <li><a href="<?php
                 if(isset($_COOKIE['logincookie']))
@@ -38,8 +37,6 @@
                     }
                     ?></a></li>
 
-
-
             <li><a href="<?php
                 if(isset($_COOKIE['logincookie']))
                 {
@@ -47,7 +44,7 @@
                 }
                 else
                 {
-                    echo "signup.html" ;
+                    echo "signup.php" ;
                 }
                 ?>"><?php
                     if(isset($_COOKIE['logincookie']))
@@ -62,8 +59,6 @@
         </ul>
     </nav>
 </main>
-
-
                     <form method="get" action="<?php
                     if(isset($_COOKIE['logincookie']))
                     {
@@ -71,11 +66,11 @@
                     }
                     else
                     {
-                        echo "signup.html" ;
+                        echo "signup.php" ;
                     }
                     ?>">
                         <div class="intro">
-                            <p>Start your Journey Today and Learn to code</p>
+                            <p>Start your Journey Today and Learn Math</p>
                             <input type="submit" id="blo" value="<?php
                             if(isset($_COOKIE['logincookie']))
                             {
@@ -86,11 +81,7 @@
                                 echo "Start !" ;
                             }
                             ?>" name="signup2">
-
                         </div>
                     </form>
-
-
-
 </body>
 </html>
