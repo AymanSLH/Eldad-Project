@@ -9,13 +9,18 @@
     <title>Profile | Eldad Project </title>
 </head>
 <body>
-
+<?php
+if (!isset($_COOKIE['logincookie']))
+{
+    header("Location:sorry.php") ;
+}
+?>
 <div class="container">
 
     <nav class="navbar">
         <ul>
             <li><a href="index.php">Home</a></li>
-            <li><a href="">Forum</a></li>
+            <li><a href="forumindex.php">Forum</a></li>
             <li><a href="#">Chat</a></li>
 
 
@@ -48,7 +53,7 @@
                 }
                 else
                 {
-                    echo "signup.html" ;
+                    echo "signup.php" ;
                 }
                 ?>"><?php
                     if(isset($_COOKIE['logincookie']))
@@ -69,8 +74,12 @@
             <?php
             if (isset($_GET['out']))
             {
-                unset($_COOKIE['logincookie']) ;
-                unset($_COOKIE['loginname']) ;
+                setcookie('logincookie' , $the_id, time() - 3000 , '/')  ;
+                setcookie('loginname'   , $the_name, time() - 3000 , '/')  ;
+                setcookie('loginLesson'   , $the_lesson_id, time() - 3000 , '/')  ;
+                setcookie('loginDOB'   , $the_DOB, time() - 3000 , '/')  ;
+                setcookie('loginEmail'   , $the_email, time() - 3000 , '/')  ;
+                header('Location: index.php');
 
             }
             ?>
@@ -85,7 +94,7 @@
         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xs-offset-0 col-sm-offset-0 col-md-offset-3 col-lg-offset-3 toppad" >
             <div class="panel panel-info">
                 <div class="panel-heading">
-                    <h3 class="panel-title">USER NAME</h3>
+                    <h3 class="panel-title"><?php echo $_COOKIE['loginname'] ; ?></h3>
                 </div>
                 <div class="panel-body">
                     <div class="row">
@@ -97,33 +106,33 @@
                                 <tbody>
                                 <tr>
                                     <td>Progress in Course </td>
-                                    <td> ?????  </td>
+                                    <td> You are in Lesson Number <?php echo $_COOKIE['loginLesson']; ?> </td>
                                 </tr>
                                 <tr>
                                     <td>Date of Birth </td>
-                                    <td>06/23/2013</td>
+                                    <td> <?php echo $_COOKIE['loginDOB']; ?> </td>
                                 </tr>
 
                                 <tr>
                                     <td>Gender</td>
-                                    <td>Female</td>
+                                    <td> N A </td>
                                 </tr>
                                 <tr>
                                     <td>Home Address</td>
-                                    <td>Kathmandu,Nepal</td>
+                                    <td>  NA </td>
                                 </tr>
                                 <tr>
                                     <td>Email</td>
-                                    <td><a href="mailto:info@support.com">info@support.com</a></td>
+                                    <td><a href="mailto:"><?php echo $_COOKIE['loginEmail']; ?></a></td>
                                 </tr>
                                 <td>Phone Number</td>
-                                <td>123-4567-890(Landline)<br><br>555-4567-890(Mobile)
+                                <td>N A  (Landline)<br><br> NA (Mobile)
                                 </td>
                                 </tr>
                                 </tbody>
                             </table>
-                            <a href="#" class="btn btn-primary">Resume Learning</a>
-                            <a href="#" class="btn btn-danger">Delete Account </a>
+                            <a href="<?php echo "http://localhost/Eldad-Project/videolesson.php?lesson_number=".$_COOKIE['loginLesson'] ; ?>" class="btn btn-primary">Resume Learning</a>
+                            <a href="reset.php" class="btn btn-danger">Reset Account Progress </a>
                         </div>
                     </div>
                 </div>
