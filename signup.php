@@ -4,7 +4,7 @@
         $Get_Email = $_GET['Email'];
         $Get_DOB = $_GET['DOB'];
         $Get_Password = $_GET['Password'];
-        $db = new SQLite3('Adaptive.db');
+        $db = new SQLite3('DB/Adaptive.db');
         $statement = $db->prepare('insert into Student ("Name" ,"DOB",  "Email" , "Password") VALUES (:Name ,:DOB , :Email,:Password)');
         $statement->bindValue(':Name', $Get_Name);
         $statement->bindValue(':DOB', $Get_DOB);

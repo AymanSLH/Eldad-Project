@@ -20,7 +20,7 @@
     <ul>
         <li><a href="index.php">Home</a></li>
         <li><a href="forumindex.php">Forum</a></li>
-        <li><a href="#">Chat</a></li>
+        <li><a href="chat.php">Chat</a></li>
 
         <li><a href="<?php
             if(isset($_COOKIE['logincookie']))
@@ -72,7 +72,7 @@
 </header>
 
             <?php
-            $data_base = new SQLite3('forum.db') ;
+            $data_base = new SQLite3('DB/forum.db') ;
             $raw_result = $data_base->query("Select * from Posts") ;
             while ($row = $raw_result->fetchArray()) :
             ?>

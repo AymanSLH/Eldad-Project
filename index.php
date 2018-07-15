@@ -15,7 +15,7 @@
         <ul>
             <li><a href="index.php">Home</a></li>
             <li><a href="forumindex.php">Forum</a></li>
-            <li><a href="#">Chat</a></li>
+            <li><a href="chat.php">Chat</a></li>
 
             <li><a href="<?php
                 if(isset($_COOKIE['logincookie']))

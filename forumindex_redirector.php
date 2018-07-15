@@ -18,7 +18,7 @@ if (isset($_GET['createmypost']))
     $Get_title = $_GET['title'];
     $Get_description = $_GET['description'];
     $current_date  =   date('Y-m-d H:i:s')  ;
-    $db = new SQLite3('forum.db');
+    $db = new SQLite3('DB/forum.db');
     $statement = $db->prepare('insert into Posts ("stamp" ,"author",  "title" , "matan") VALUES (:stamp,:author,:title,:matan)');
     $statement->bindValue(':stamp', $current_date);
     $statement->bindValue(':author', $author);

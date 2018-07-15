@@ -93,7 +93,7 @@
         $alternative  = $_GET['alternative'] ;
     }
 
-    $data_base = new SQLite3('Adaptive.db') ;
+    $data_base = new SQLite3('DB/Adaptive.db') ;
 
     $raw_result = $data_base->query("Select Alter_id , Alter_Type from Alternative_Lesson") ;
 

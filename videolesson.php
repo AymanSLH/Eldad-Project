@@ -42,7 +42,7 @@ if (!isset($_COOKIE['logincookie']))
                 <ul>
                     <li><a href="index.php">Home</a></li>
                     <li><a href="">Forum</a></li>
-                    <li><a href="#">Chat</a></li>
+                    <li><a href="chat.php">Chat</a></li>
 
 
                     <li><a href="<?php
@@ -105,7 +105,7 @@ if (!isset($_COOKIE['logincookie']))
                     setcookie('loginLesson'   , $new_integer_lesson , time() + 3000 , '/')  ;
                 }
 
-                $data_base = new SQLite3('Adaptive.db') ;
+                $data_base = new SQLite3('DB/Adaptive.db') ;
                 $statement = $data_base->prepare('update  Checkpoint Set "Lesn_id"=:lesn_id Where "Std_id"=:std_id');
                 $statement->bindValue(':lesn_id', $new_integer_lesson);
                 $statement->bindValue(':std_id', $_COOKIE['logincookie']);
@@ -129,7 +129,7 @@ if (!isset($_COOKIE['logincookie']))
 
         <video src="<?php echo "videos/".$lesson_name ; ?>"  style="width:100%;height:450px" controls></video>
         <div class="w3-container">
-           <h2 style="color: orange"><a href="<?php echo "rate.php?lesson_name=".$lesson_name ; ?>">Rate This Lesson</a></h2>
+           <h2 style="color: orange"><a href="<?php echo "rate.php?lesson_name=".$lesson_name ; ?>" target="_blank">Rate This Lesson</a></h2>
         </div>
 </div>
 </body>

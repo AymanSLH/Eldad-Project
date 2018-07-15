@@ -38,7 +38,6 @@ if (!isset($_COOKIE['logincookie']))
                         $q = $_COOKIE['Q'] ;
                         $ans = $_COOKIE['Ans'] ;
                         ?>
-
    <form method="get" action="quizTOvideo.php">
        <p id="question"><?php  echo $q ?> </p>
         <div>

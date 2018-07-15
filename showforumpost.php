@@ -22,7 +22,7 @@ if (isset($_GET['pid']))
 {
     $our_post = $_GET['pid'] ;
 }
-$data_base = new SQLite3('forum.db') ;
+$data_base = new SQLite3('DB/forum.db') ;
 $raw_result = $data_base->query("Select * from Posts") ;
 while ($row = $raw_result->fetchArray()) :
 if ($row['id'] == $our_post):
